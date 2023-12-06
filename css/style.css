@@ -65,3 +65,11 @@ main {
     flex: 1 1 0;
     margin: 50px 10px;
 }
+
+footer {
+    background-color: #5685a1
+}
+
+footer .copyright {
+    background-color: rgba(0, 0, 0, 0.2)
+}
