@@ -9,134 +9,269 @@
 </head>
 <body>
   <!-- HEADER -->
-  <h1>Asegureishon</h1>
   
-  <!-- FORMULARIO CLIENTE -->
-  <section id="formulario-cliente">
-    <h2>Carga de clientes</h2>
-    <form>
-      <div class="mb-3">
-        <label for="cuitcuil" class="form-label">CUIT/CUIL</label>
-        <input type="number" class="form-control" id="cuitcuil">
-      </div>
-    
-      <div class="row">
-        <div class="col">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" id="nombre">
-        </div>
-        <div class="col">
-          <label for="nombre" class="form-label">Apellido</label>
-          <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name" id="apellido">
-        </div>
-      </div>
-      <br>
-      <div class="mb-3">
-        <div class="row">
-        <div class="col">
-        <label for="email" class="form-label">Direccion de mail</label>
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-        </div>
-        <div class="col">
-        <label for="telefono" class="form-label">Teléfono</label>
-        <input type="tel" class="form-control" id="telefono">
-        </div>
-      </div>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-light p-3" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Seguros Avatar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       
-
-      <button class="btn btn-primary" type="submit">Cargar</button>
-    </form>
-  </section>
-
-  <!-- FORMULARIO VEHICULO -->
-  
-  <section id="formulario-vehiculo">
-    <h2>Carga de vehículos</h2>
-
-      <form action="">
-      <div class="row">
-        
-        <div class="col">
-          <label for="patente" class="form-label">Patente</label>
-          <input type="text" class="form-control" placeholder="patente" id="patente">
-        </div>
-        
-        <div class="col">  
-          <label for="anio" class="form-label">Año de patentamiento</label>
-          <input type="number" class="form-control" placeholder="año" id="anio">
-        </div>
-        
-      </div>
-      
-      <div class="row">
-        <div class="col">
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#formularios-container">Carga de bienes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#clientes-container">Nuestros Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#vehiculos-container">Sus vehículos</a>
+          </li>
           
-          <label for="select-marcas" class="form-label">Marca</label>        
-          <select class="form-select" aria-label="Default select example" id="select-marcas">
-          </select>
-
+        </ul>
+        <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+          <li class="nav-item mx-2">
+            <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-google-plus-square"></i></a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-facebook-square"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- CARROUSEL -->
+  
+  <main>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./rsc/img/car1.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Seguros Avatar</h5>
+            <p>Cuida de vos y tu bien mas preciado.</p>
+          </div>
         </div>
-        <div class="col">
-          <label for="modelo" class="form-label">Modelo</label>
-          <input type="text" class="form-control" placeholder="modelo" id="modelo">
+        <div class="carousel-item">
+          <img src="./rsc/img/car2.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>La mejor atencion</h5>
+            <p>Estamos las 24 horas para cualquier consulta.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./rsc/img/car3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Sentite bien con nosotros</h5>
+            <p>Tenemos todos los productos que necesitas para estar seguro.</p>
+          </div>
         </div>
       </div>
-
-      <fieldset class="fs-tipo-vehiculo">
-        <legend>Tipo de vehiculo</legend>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="tipo-vehiculo" id="sedan" checked>
-          <label class="form-check-label" for="sedan">
-            sedan
-          </label>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- FORMULARIO CLIENTE -->
+    <div class="presentacion-formularios" id="formularios-container">
+      <section id="formulario-cliente">
+        <h2>Carga de clientes</h2>
+        <form>
+          
+          <div class="mb-3 input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">CUIT/CUIL</span>
+            <input type="" class="form-control" id="cuitcuil">
+            <button class="btn btn-outline-secondary" type="button" id="boton-buscar">
+              <img class="img-icon" src="./rsc/img/magnifying_glass.png" alt="lupa">
+            </button>
+          </div>
+           
+          <div class="row">
+            <div class="col">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" id="nombre">
+            </div>
+            <div class="col">
+              <label for="nombre" class="form-label">Apellido</label>
+              <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name" id="apellido">
+            </div>
+          </div>
+          <br>
+          <div class="mb-3">
+            <div class="row">
+              <div class="col">
+                <label for="email" class="form-label">Direccion de mail</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              </div>
+              <div class="col">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono">
+              </div>
+            </div>
+          </div>
+          
+          
+          <button class="btn btn-primary" type="submit">Cargar</button>
+        </form>
+      </section>
+      
+      <!-- FORMULARIO VEHICULO -->
+      
+      <section id="formulario-vehiculo">
+        <h2>Carga de vehículos</h2>
+        
+        <form action="">
+          
+          <div class="row">
+            <div class="col">
+              <label for="patente" class="form-label">Patente</label>
+              <input type="text" class="form-control" placeholder="patente" id="patente">
+            </div>
+            
+            <div class="col">  
+              <label for="anio" class="form-label">Año de patentamiento</label>
+              <input type="number" class="form-control" placeholder="año" id="anio">
+            </div>
+            
+          </div>
+          
+          <div class="row">
+            <div class="col">
+              
+              <label for="select-marcas" class="form-label">Marca</label>        
+              <select class="form-select" aria-label="Default select example" id="select-marcas">
+              </select>
+              
+            </div>
+            <div class="col">
+              <label for="modelo" class="form-label">Modelo</label>
+              <input type="text" class="form-control" placeholder="modelo" id="modelo">
+            </div>
+          </div>
+          
+          <fieldset class="fs-tipo-vehiculo">
+            <legend>Tipo de vehiculo</legend>
+            <div class="form-check">
+              <input class="form-check-input" value="sedan" type="radio" name="tipo-vehiculo" id="sedan" checked>
+              <label class="form-check-label" for="sedan">
+                Sedan
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" value="SUV" type="radio" name="tipo-vehiculo" id="suv">
+              <label class="form-check-label" for="suv">
+                SUV
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" value="hatchback" type="radio" name="tipo-vehiculo" id="hatchback">
+              <label class="form-check-label" for="hatchback">
+                Hatchback
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" value="deportivo" type="radio" name="tipo-vehiculo" id="deportivo">
+              <label class="form-check-label" for="deportivo">
+                deportivo
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" value="otro" type="radio" name="tipo-vehiculo" id="otro">
+              <label class="form-check-label" for="otro">
+                otro
+              </label>
+            </div>
+          </fieldset>
+          
+          <br>
+          <div class="form-check">
+            <label class="form-check-label" for="flexCheckDefault">Tiene GNC?</label>
+            <input class="form-check-input" type="checkbox" value="gnc" id="gnc">
+            <br>
+            <div class="mb-3">
+              <label for="observaciones" class="form-label">Observaciones</label>
+              <textarea class="form-control" id="observaciones" rows="3"></textarea>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Cargar</button>
+          
+        </form>
+      </section>
+    </div>
+    
+    <section id="presentacion">
+      <div class="presentacion-clientes" id="clientes-container">
+        <h2>Nuestros clientes</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">CUIT / CUIL</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Correo Electrónico</th>
+              <th scope="col">telefono</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-clientes-body">
+            <!-- <tr>
+              <td>CUIT</th>
+                <td>NOM</td>
+                <td>APE</td>
+                <td>MAIL</td>
+                <td>TEL</td>
+              </tr> -->
+            </tbody>
+          </table>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="tipo-vehiculo" id="suv">
-          <label class="form-check-label" for="suv">
-            suv
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="tipo-vehiculo" id="hatchback">
-          <label class="form-check-label" for="hatchback">
-            hatchback
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="tipo-vehiculo" id="deportivo">
-          <label class="form-check-label" for="deportivo">
-            deportivo
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="tipo-vehiculo" id="otro">
-          <label class="form-check-label" for="otro">
-            otro
-          </label>
-        </div>
-      </fieldset>
-
-      <br>
-      <div class="form-check">
-        <label class="form-check-label" for="flexCheckDefault">Tiene GNC?</label>
-        <input class="form-check-input" type="checkbox" value="gnc" id="gnc">
-        <br>
-        <div class="mb-3">
-          <label for="observaciones" class="form-label">Observaciones</label>
-          <textarea class="form-control" id="observaciones" rows="3"></textarea>
-        </div>
-      </div>
-      <button class="btn btn-primary" type="submit">Cargar</button>
-
-    </form>
-    </section>
-
-
-
-
-
-    <script src="./js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
-  </html>
+        <div class="presentacion-vehiculos" id="vehiculos-container">
+          <h2>Sus naves</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">CUIT / CUIL</th>
+                <th scope="col">Patente</th>
+                <th scope="col">Año de patentamiento</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Tipo de vehículo</th>
+                <th scope="col">Tiene gnc?</th>
+                <th scope="col">Observaciones</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-vehiculos-body">
+              <!-- <tr>
+                <td>CUIT</th>
+                  <td>NOM</td>
+                  <td>APE</td>
+                  <td>MAIL</td>
+                  <td>TEL</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+      
+      
+      
+      <script src="./js/script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+    </html>

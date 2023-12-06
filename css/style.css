@@ -3,13 +3,60 @@
     padding: 0;
 
 }
+body {
+    background-image: url("../rsc/img/background.jpg");
 
+}
+main {
+    width: 90%;
+    margin: auto;
+}
+#navbar {
+    background-color: rgb(65, 160, 177);
+}
+.carousel {
+    width: 600px;
+    margin: 20px auto;
+}
+
+.carousel-item p, .carousel-item h5 {
+    background-color: rgba(80, 80, 80, 0.5);
+    color: rgb(255, 255, 255);
+}
+.img-icon {
+    height: 15px;
+    width: auto;
+}
 #formulario-cliente, #formulario-vehiculo {
+    padding: 10px;
+    border-radius: 10px;
     width: 800px !important;
     margin: 60px auto ;
+    background-color: rgba(95, 95, 95, 0.5);
 }
+
 
 .fs-tipo-vehiculo {
     width: fit-content;
     margin: 10px auto 10px;
+}
+
+#patente {
+    text-transform: uppercase;
+}
+
+#presentacion {
+    width: 1200px;
+    margin: auto;
+}
+.presentacion-formularios {
+    display: flex;
+}
+
+.presentacion-clientes, .presentacion-vehiculos {
+    background-color: rgba(95, 95, 95, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1 1 0;
+    margin: 50px 10px;
 }
