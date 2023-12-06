@@ -65,7 +65,7 @@ const marcas = Array(
         let clientes = [
         {"cuitcuil": "20123456786", "nombre":"Arian", "apellido": "Vivo Alesso", "email" : "contacto@arianvivo.com", "telefono": "291-5123456" },
         {"cuitcuil": "27947582947", "nombre":"Lionel", "apellido": "Messi", "email" : "lmessi@latercera.com", "telefono": "29205249323" },
-        {"cuitcuil": "30826453679", "nombre":"Arnold", "apellido": "Swarzenegger", "email" : "arnie-shwarz@skynet.com", "telefono": "(012)243-98302" }
+        {"cuitcuil": "30826453679", "nombre":"Arnold", "apellido": "Swarzenegger", "email" : "arnieshwarz@skynet.com", "telefono": "(012)243-98302" }
         ];
 
         let vehiculos = [
