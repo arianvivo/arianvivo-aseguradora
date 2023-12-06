@@ -61,7 +61,21 @@ const marcas = Array(
     
     
     // FORMULAS AUXILIARES
-    
+
+        let clientes = [
+        {"cuitcuil": "20123456786", "nombre":"Arian", "apellido": "Vivo Alesso", "email" : "contacto@arianvivo.com", "telefono": "291-5123456" },
+        {"cuitcuil": "27947582947", "nombre":"Lionel", "apellido": "Messi", "email" : "lmessi@latercera.com", "telefono": "29205249323" },
+        {"cuitcuil": "30826453679", "nombre":"Arnold", "apellido": "Swarzenegger", "email" : "arnie-shwarz@skynet.com", "telefono": "(012)243-98302" }
+        ];
+
+        let vehiculos = [
+            {"cuitcuil": "20123456786","patente": "AG123EF", "anio":"2023","marca": "DODGE", "modelo": "Charger", "tipoVehiculo" : "otro", "gnc": false, "observaciones": "Color negro"},
+            {"cuitcuil": "27947582947","patente": "ASD123", "anio":"1973","marca": "RENAULT", "modelo": "12", "tipoVehiculo" : "sedan", "gnc": true, "observaciones": "Alto auto. Los repuestos son baratos."},
+            {"cuitcuil": "27947582947","patente": "AF546OL", "anio":"2022","marca": "NISSAN", "modelo": "R34 Skyline", "tipoVehiculo" : "sedan", "gnc": false, "observaciones": ""},
+            {"cuitcuil": "30826453679","patente": "AG100AE", "anio":"2023","marca": "FERRARI", "modelo": "Testarrosa", "tipoVehiculo" : "deportivo", "gnc": false, "observaciones": "Color rojo"}
+        ]
+       
+
     const checkCuitCuil =  (cuitcuil) => {
         console.log(" == Verificacion CUIT/CUIL == ")
         
@@ -192,6 +206,12 @@ const marcas = Array(
         });
     }
 
+
+    const cargaInicial = ()    => {
+        construirTablaClientes();
+        construirTablaVehiculos();
+    }
+
     const limpiarCampoCliente = () => {
         document.getElementById("cuitcuil").value = ""
         document.getElementById("nombre").value = ""
@@ -237,7 +257,7 @@ const marcas = Array(
         
     })
     
-    let clientes = [];
+
     
     let formularioCliente = document.getElementById("formulario-cliente")
     
@@ -291,9 +311,7 @@ const marcas = Array(
     })
     
     let formularioVehiculo = document.getElementById("formulario-vehiculo")
-    
-    let vehiculos = []
-    
+        
     let anioActual = parseInt(new Date().getFullYear())
     console.log("Actual:" +anioActual)
     
