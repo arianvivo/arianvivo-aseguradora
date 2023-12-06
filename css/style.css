@@ -45,6 +45,11 @@ main {
     text-transform: uppercase;
 }
 
+#resetear-campos {
+    display: block;
+    margin: auto;
+}
+
 #presentacion {
     width: 1200px;
     margin: auto;

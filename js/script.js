@@ -192,6 +192,23 @@ const marcas = Array(
         });
     }
 
+    const limpiarCampoCliente = () => {
+        document.getElementById("cuitcuil").value = ""
+        document.getElementById("nombre").value = ""
+        document.getElementById("apellido").value = ""
+        document.getElementById("email").value = ""
+        document.getElementById("telefono").value = ""
+    }
+
+    const limpiarCampoVehiculo = () => {
+        document.getElementById("patente").value = ""
+        document.getElementById("anio").value = ""
+        // document.getElementById("select-marcas").value = ""
+        document.getElementById("modelo").value = ""
+        document.getElementById("gnc").checked = false
+        document.getElementById("observaciones").value = ""
+        
+    }
     
     ///////////////////////////
     
@@ -233,19 +250,19 @@ const marcas = Array(
         let telefono = document.getElementById("telefono")
         
         if (!checkCuitCuil(parseInt(cuitCuil.value))) {
-            alert("CUIL BASURA")
+            alert("CUIL inválido!")
             cuitCuil.value = ""
         } else if (!checkNombre(nombre.value)) {
-            alert("Nombre basyura")
+            alert("Nombre inválido!")
             nombre.value=""
         } else if (!checkNombre(apellido.value)) {
-            alert("apellido basura")
+            alert("apellido inválido!")
             apellido.value = ""
         } else if (!checkEmail(email.value)) {
-            alert("Email basura")
+            alert("Email inválido!")
             email.value=""
         } else if (!checkTelefono(telefono.value)){
-            alert("Telefono basura")
+            alert("Telefono inválido!")
             telefono.value=""
         } else  {
             let nuevaCarga = {
@@ -295,16 +312,16 @@ const marcas = Array(
             alert("Cliente inexistente! Por favor cargue primero")
         }
         if (!checkPatente(patente.value)) {
-            alert("Patente basura")
+            alert("Patente inválida!")
             patente.value =""
         } else if (existePatente(patente.value)) {
             alert("Patente ya cargada!")
             patente.value =""
         } else if (parseInt(anio.value) > anioActual || isNaN(anio.value)) {
-            alert("Año basura")
+            alert("Año invalido")
             anio.value = ""
         } else if (!marcas.includes(marca)) {
-            alert("Marca basura")
+            alert("Marca inválida!")
         } else if (modelo.value == "") {
             alert("No incluyó modelo!")
         } else if (tipoVehiculo == null) {
@@ -325,7 +342,14 @@ const marcas = Array(
             alert("Finalizado!")
             console.log(nuevoVehiculo)
             construirTablaVehiculos()
+            limpiarCampoVehiculo()
         }
         
     })
     
+    let resetear = document.getElementById("resetear-campos")
+
+    resetear.addEventListener("click", () => {
+        limpiarCampoVehiculo()
+        limpiarCampoCliente()
+    })
